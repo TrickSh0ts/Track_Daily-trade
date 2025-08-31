@@ -106,10 +106,11 @@ div[data-testid="stTextInput"] label:empty { display:none !important; }
 </style>
 """, unsafe_allow_html=True)
 
-try:
-    st.sidebar.image("tradeiros_logo.png", use_container_width=True)
-except Exception:
-    pass
+from storage import get_asset_path
+
+logo_path = get_asset_path("tradeiros_logo.png")
+st.sidebar.image(logo_path, use_container_width=True)
+
 
 # ===== estado =====
 if "ds" not in st.session_state:
