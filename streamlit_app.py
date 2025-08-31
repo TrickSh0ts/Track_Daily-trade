@@ -109,8 +109,7 @@ div[data-testid="stTextInput"] label:empty { display:none !important; }
 from storage import get_asset_path
 
 logo_path = get_asset_path("tradeiros_logo.png")
-st.sidebar.image(logo_path, use_container_width=True)
-
+st.sidebar.image(logo_path, use_column_width=True)
 
 # ===== estado =====
 if "ds" not in st.session_state:
@@ -600,3 +599,4 @@ with tabs[5]:
         save_json(SYMBOLS_FILE, symbols_default()); save_json(SETTINGS_FILE, {"theme":"dark"})
         set_alert("admin", "success", "Dados apagados.")
         refresh_datastore(); st.rerun()
+
