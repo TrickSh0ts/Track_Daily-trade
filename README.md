@@ -1,2 +1,6 @@
-# Track_Daily-trade
-Simple_daily_trade
+# Tradeiros — Diário de Trades
+
+### Como correr localmente
+```bash
+pip install -r requirements.txt
+streamlit run app.py
